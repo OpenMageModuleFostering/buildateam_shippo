@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Buildateam_Shippo>
+            <active>true</active>
+            <codePool>community</codePool>
+            <version>1.0.0</version>
+        </Buildateam_Shippo>
+    </modules>
+</config>

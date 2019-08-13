@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_new>
+        <update handle="buildateam_shippo_catalog_product_js"/>
+    </adminhtml_catalog_product_new>
+
+    <adminhtml_catalog_product_edit>
+        <update handle="buildateam_shippo_catalog_product_js"/>
+    </adminhtml_catalog_product_edit>
+
+    <buildateam_shippo_catalog_product_js>
+        <reference name="before_body_end">
+            <block type="core/template" name="buildateam_shippo_product_js" as="buildateam_shippo_product_js" template="buildateam/shippo/catalog/product/js.phtml"/>
+        </reference>
+    </buildateam_shippo_catalog_product_js>
+</layout>

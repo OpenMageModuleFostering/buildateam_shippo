@@ -1,0 +1,15 @@
+<?php
+
+?>
+<script type="text/javascript">
+Event.observe(window, 'load', function(){
+    Validation.add('validate-dimentions-lwh','Should be in the form of 17.3x8x7',function(v){
+
+        if ( Validation.get('IsEmpty').test(v) || v.match(/([\.\d])+x([\.\d])+x([\.\d])+/) ) {
+            return true;
+        }
+
+        return false;
+    });
+});
+</script>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Buildateam_Shippo>
+            <version>1.0.2</version>
+        </Buildateam_Shippo>
+    </modules>
+    <default>
+        <carriers>
+            <buildateam_shippo>
+                <active>0</active>
+
+                <private_auth_token>167263307a16e8b1c51fbf4b055decc85b683678</private_auth_token>
+				
+                <from_name>JOHN SMITH</from_name>
+                <from_company>BEST COMPANY EVER</from_company>
+                <from_country>US</from_country>
+                <from_region>19</from_region>
+                <from_postcode>30320</from_postcode>
+                <from_city>Atlanta</from_city>
+                <from_street>9050A   ALEXA AVE SE</from_street>
+                <from_phone>111-111-1111</from_phone>
+                <from_email>john.smith@bestcompany.com</from_email>
+
+                <weight_unit>lb</weight_unit>
+                <size_unit>in</size_unit>
+                <shipping_handling>0</shipping_handling>
+
+                <model>buildateam_shippo/carrier</model>
+                <title>Shippo</title>
+                <sort_order>10</sort_order>
+                <sallowspecific>1</sallowspecific>
+                <specificcountry>US</specificcountry>
+                <economy_description>
+                    <![CDATA[<div class="s_methodTop">(3-6 business days)</div><div class="s_methodBottom">ORDER BY 1PM PST DEC 15TH TO RECIEVE BY DEC 24TH</div>]]></economy_description>
+                <expedited_description>
+                    <![CDATA[<div class="s_methodTop">(2-3 business days)</div><div class="s_methodBottom">ORDER BY 10AM PST DEC 22ND TO RECIEVE BY DEC 24TH</div>]]></expedited_description>
+                <overnight_description>
+                    <![CDATA[<div class="s_methodTop">(1-2 business days)</div><div class="s_methodMiddle">ORDERS MUST PLACED BY 10AM PST M-TH</div><div class="s_methodBottom">ORDER BY 1PM PST DEC 23RD TO RECIEVE BY DEC 24TH</div>]]></overnight_description>
+                <expedited_cost>32.00</expedited_cost>
+                <overnight_cost>70.00</overnight_cost>
+            </buildateam_shippo>
+        </carriers>
+        <buildateam_shippo>
+            <general>
+                <email_delay>30</email_delay>
+                <enable>1</enable>
+            </general>
+        </buildateam_shippo>
+    </default>
+    <frontend>
+        <layout>
+            <updates>
+            </updates>
+        </layout>
+        <routers>
+            <buildateam_shippo>
+                <use>standard</use>
+                <args>
+                    <module>Buildateam_Shippo</module>
+                    <frontName>buildateamshippo</frontName>
+                </args>
+            </buildateam_shippo>
+        </routers>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <buildateam_shippo>
+                    <file>buildateam/shippo.xml</file>
+                </buildateam_shippo>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <helpers>
+            <buildateam_shippo>
+                <class>Buildateam_Shippo_Helper</class>
+            </buildateam_shippo>
+        </helpers>
+        <blocks>
+            <buildateam_shippo>
+                <class>Buildateam_Shippo_Block</class>
+            </buildateam_shippo>
+        </blocks>
+        <models>
+            <buildateam_shippo>
+                <class>Buildateam_Shippo_Model</class>
+                <resourceModel>buildateam_shippo_resource</resourceModel>
+            </buildateam_shippo>
+            <buildateam_shippo_resource>
+                <class>Buildateam_Shippo_Model_Resource</class>
+                <entities>
+                </entities>
+            </buildateam_shippo_resource>
+        </models>
+        <resources>
+            <buildateam_shippo_setup>
+                <setup>
+                    <module>Buildateam_Shippo</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </buildateam_shippo_setup>
+        </resources>
+        <template>
+            <email>
+            </email>
+        </template>
+        <events>
+        </events>
+    </global>
+    <crontab>
+        <jobs>
+        </jobs>
+    </crontab>
+</config>
