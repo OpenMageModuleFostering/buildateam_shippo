@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Buildateam_Shippo",
+    "name": "OpenMageModuleFostering\/Buildateam_Shippo",
     "type": "magento-module",
     "license": "Buildateam-EULA",
     "homepage": "",
     "description": "Shippo integration",
     "authors": [
-    {
-        "name": "Buildateam",
-        "email": "lex.mustafin@gmail.com"
-    }
-],
+        {
+            "name": "Buildateam",
+            "email": "lex.mustafin@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
